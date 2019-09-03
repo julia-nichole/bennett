@@ -4,9 +4,9 @@ var Schema = mongoose.Schema;
 var commentSchema = new Schema({
     content: {
         type: String,
-        required: true,
+      
     },
-    overallRat: {
+    Rat: {
         type: Number,
         min: 2,
         max: 10,

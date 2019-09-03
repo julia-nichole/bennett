@@ -22,7 +22,8 @@
 
 
 
-
+# heroku link
+https://fanatsy.herokuapp.com/
 
 
 

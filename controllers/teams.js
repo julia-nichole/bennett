@@ -23,9 +23,9 @@ function deleteTeam(req, res, next) {
 
         team.comments.id(req.params.id).remove();
         team.save(function(err) {
-        res.render('teams/show', {header: 'Player Profile', team, user: req.user})
+        res.render('/teams', {header: 'Player Profile', team, user: req.user})
         });
-    });
+    }); 
 }
 
 function show(req, res) {
