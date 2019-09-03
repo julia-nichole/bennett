@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>PREMIER LEAGUE </title>
+</head>
+<body class = "first">
+  <nav>
+   <h1>PREMIER LEAGUE </h1>
+    <a href="/teams/new" >Add a Player</a>
+    <a href="/teams" >Current team </a>
+    <ul class=>
+  <nav>
+    
+        <%if (user) { %>
+          <a class="btn btn-danger auth" href="/logout">Logout</a>
+          <% } else { %>
+          <a class="btn btn-success auth" href="/auth/google">Login</a>
+          <% } %>
+        </nav>
+   </body>
 </html>

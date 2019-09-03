@@ -4,5 +4,23 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: black ;
+}
+.first{
+  background-image: url('https://i.imgur.com/kyKs0A4.jpg');
+  height: 100vmin; 
+  background-position: center;
+  background-size: cover;
+}
+nav {
+  display: flex;
+  justify-content:space-around;
+  list-style-type: none;
+   margin: 0;
+   overflow: hidden;
+   display: flex;
+   justify-content:space-around;
+   padding: 20px;
+   font-size: 20px;
+   background-color: rgb(255,255,130,0.5);
 }
