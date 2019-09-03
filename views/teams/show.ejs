@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>PREMIER LEAGUE </title>
+</head>
+<body class = "four">
+  <nav>
+   <h1>PREMIER LEAGUE </h1>
+  
+    <ul class=>
+  <nav>
+        <a href="/teams/new" >Add a Player</a>
+        <a href="/teams" >Current team </a>
+        <%if (user) { %>
+          <a class="btn btn-danger auth" href="/logout">Logout</a>
+          <% } else { %>
+          <a class="btn btn-success auth" href="/auth/google">Login</a>
+          <% } %>
+        </nav>
+   </body>
+<section id="show-page">
+        <div>Player Name: </div>
+        <div><%= team.playerName %></div>
+        <div>Position: </div>
+        <div><%= team.position %></div>
+        
+    </section>
+    
+    <br><h2>Players Comments</h2>
+    <form id="comment-form" method="POST"
+      action="/teams/<%= team._id %>/comments">
+    
+      <label>Comment:</label>
+      <textarea name="content"></textarea>
+      <label>Rating:</label>
+      <select name="rats">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <input type="submit" value="Add Comment">
+     
+    </form>
+    
+    <% if (team.comments.length) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>comment:</th>
+                        <th>overal:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% team.comments.forEach(function(c) { %>
+                        <tr>
+                            <td><%= c.content %></td>
+                            <td><%= c.overallRat %></td>
+                            <form action="/teams/<%= c._id %>?_method=DELETE" method="POST" class="secondary-content">
+                            <td><button type="submit" class="delbutton">DELETE</button></td>
+                            </form>
+                        </tr>
+                    </form>  
+                    <% }); %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <h5>No Comments </h5>
+    <% } %>

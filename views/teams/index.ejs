@@ -1,0 +1,46 @@
+<html lang="en"></html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>PREMIER LEAGUE </title>
+  </head>
+  <body class = "second">
+    <nav>
+     <h1>PREMIER LEAGUE </h1>
+      <a href="/teams/new" >Add a Player</a>
+      <a href="/teams" >Current team </a>
+      <%if (user) { %>
+        <a class="btn btn-danger auth" href="/logout">Logout</a>
+        <% } else { %>
+        <a class="btn btn-success auth" href="/auth/google">Login</a>
+        <% } %>
+      </nav>
+      <table>
+            <thead>
+                <tr>
+                    <th>Player name:</th>
+                    <th>position:</th>
+                    <th>injured:</th>              
+                </tr>
+            </thead>
+    
+ 
+      <% teams.forEach(function(t) { %>
+        <tr>
+            <td><%= t.playerName %></td>
+            <td><%= t.position %></td>
+            <td><a href="/teams/<%= t._id %>">Stats</a></td>
+            <form action="/teams/<%= t._id %>?_method=PUT" method="POST" class="secondary-content">
+                <td>Update Player name: <input type="text" name="newName"></td>
+                <td><button type="submit" class="updatebutton">UPDATE</button></td>
+        </form>
+           
+        </tr>
+       <% }) %> 
+   
+       
+    </main>
+</body>
+</html>

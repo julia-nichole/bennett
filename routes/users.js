@@ -1,9 +1,7 @@
-const express = require('express');
-const router = express.Router();
 
+var express = require('express');
+var router = express.Router();
+var teamsCtrl = require('../controllers/teams');
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
+router.get('/', teamsCtrl.index);
 module.exports = router;

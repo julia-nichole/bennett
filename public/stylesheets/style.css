@@ -24,3 +24,52 @@ nav {
    font-size: 20px;
    background-color: rgb(255,255,130,0.5);
 }
+.three{background-image: url(' https://i.imgur.com/ryIBVVj.jpg');
+  height: 100vmin; 
+  background-position: center;
+  background-size: cover;
+ 
+}
+.second{
+  background-image: url('https://i.imgur.com/VwANr8I.jpg');
+  height: 100vmin; 
+  background-position: center;
+  background-size: cover;
+}
+section{
+  margin:15px;
+  padding:40px;
+  background-color:  rgb(255,255,130,0.5);
+}
+.submit{
+  margin :20px;
+  padding: 20px;
+}
+tr{
+  display: flex;
+  justify-content:space-around;
+  list-style-type: none;
+   margin: 0;
+   overflow: hidden;
+   display: flex;
+   justify-content:space-around;
+   padding: 20px;
+   background-color:  rgb(255,255,130,0.5);
+}
+td{
+  display: flex;
+  justify-content:space-around;
+  list-style-type: none;
+   margin: 0;
+   overflow: hidden;
+   display: flex;
+   justify-content:space-around;
+   padding: 20px;
+   
+}
+.four{
+  background-image: url('https://i.imgur.com/bOSyhzn.jpg');
+  height: 100vmin; 
+  background-position: center;
+  background-size: cover;
+}

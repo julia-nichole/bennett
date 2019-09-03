@@ -7,6 +7,8 @@ var session = require('express-session')
 var passport = require('passport');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var teamsRouter = require('./routes/teams');
+var commentsRouter = require('./routes/comments');
 require('dotenv').config();
 require('./config/passport');
 require('./config/database');
@@ -31,7 +33,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/teams', teamsRouter);
+app.use('/', commentsRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
