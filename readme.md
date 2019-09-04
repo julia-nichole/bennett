@@ -49,7 +49,7 @@ https://fanatsy.herokuapp.com/
 
 * GoogleOAuth
 
-* NPM Express
+*  Express
 
 * MongoDB
 
