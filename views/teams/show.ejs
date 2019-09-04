@@ -3,6 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>PREMIER LEAGUE </title>
 </head>
@@ -14,19 +15,14 @@
   <nav>
         <a href="/teams/new" >Add a Player</a>
         <a href="/teams" >Current team </a>
-        <%if (user) { %>
-          <a class="btn btn-danger auth" href="/logout">Logout</a>
-          <% } else { %>
-          <a class="btn btn-success auth" href="/auth/google">Login</a>
-          <% } %>
         </nav>
    </body>
-<section id="show-page">
+   <section id="show-page">
         <div>Player Name: </div>
         <div><%= team.playerName %></div>
         <div>Position: </div>
         <div><%= team.position %></div>
-        
+       
     </section>
     
     <br><h2>Players Comments</h2>
@@ -36,7 +32,7 @@
       <label>Comment:</label>
       <textarea name="content"></textarea>
       <label>Rating:</label>
-      <select name="rats">
+      <select name="overallRat">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -74,5 +70,5 @@
                 </tbody>
             </table>
         <% } else { %>
-            <h3>No Comments </h3>
+            <h5>No Comments </h5>
     <% } %>

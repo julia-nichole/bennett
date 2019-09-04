@@ -6,7 +6,7 @@ module.exports = {
    new: newTeam,
    index,
    show,
-   delete: deleteTeam,
+   delete: deleteCom,
    update
 }
 function update(req, res) {
@@ -18,14 +18,13 @@ function update(req, res) {
         })
     })
 }
-function deleteTeam(req, res, next) {
+function deleteCom(req, res, next) {
     Team.findOne({'comments._id': req.params.id}, function(err, team) {
-
         team.comments.id(req.params.id).remove();
         team.save(function(err) {
-        res.render('/teams', {header: 'Player Profile', team, user: req.user})
+        res.render('teams/show', {header: 'Player Profile', team})
         });
-    }); 
+    });
 }
 
 function show(req, res) {
@@ -38,7 +37,6 @@ function create (req, res){
     const team = new Team(req.body);
     team.save(function(err){
         if(err) return res.render('teams/new');
-        console.log(team);
         res.redirect('/teams');
     })
 }

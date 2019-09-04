@@ -10,7 +10,6 @@ var commentSchema = new Schema({
         type: Number,
         min: 2,
         max: 10,
-        default: 5
     },
 }, {
     timestamps: true,
