@@ -73,6 +73,17 @@ td{
   background-position: center;
   background-size: cover;
 }
+.stats{
+  display: flex;
+  justify-content:space-around;
+  list-style-type: none;
+   margin: 0;
+   overflow: hidden;
+   display: flex;
+   justify-content:space-around;
+   padding: 20px;
+
+}
 button{
   border-top: 1px solid #96d1f8;
   background: #65d668;
@@ -104,3 +115,26 @@ button{
   border-top-color: #1b435e;
   background: #1b435e;
   }
+.delete{  border-top: 1px solid #f00e0e;
+  background: #ff0080;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fc0505), to(#ff0080));
+  background: -webkit-linear-gradient(top, #fc0505, #ff0080);
+  background: -moz-linear-gradient(top, #fc0505, #ff0080);
+  background: -ms-linear-gradient(top, #fc0505, #ff0080);
+  background: -o-linear-gradient(top, #fc0505, #ff0080);
+  padding: 5px 10px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: white;
+  font-size: 14px;
+  font-family: Georgia, serif;
+  text-decoration: none;
+  vertical-align: middle;
+  
+
+}

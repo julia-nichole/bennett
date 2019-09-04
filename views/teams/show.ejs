@@ -17,12 +17,13 @@
         <a href="/teams" >Current team </a>
         </nav>
    </body>
-   <section id="show-page">
+   <section class="stats">
         <div>Player Name: </div>
         <div><%= team.playerName %></div>
         <div>Position: </div>
         <div><%= team.position %></div>
-       
+       <!-- <div> Injured :</div>
+        <div><%= team.injured %></div> -->
     </section>
     
     <br><h2>Players Comments</h2>
@@ -32,7 +33,7 @@
       <label>Comment:</label>
       <textarea name="content"></textarea>
       <label>Rating:</label>
-      <select name="overallRat">
+      <select name="Rat">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -44,7 +45,7 @@
         <option value="9">9</option>
         <option value="10">10</option>
       </select>
-      <input type="submit" value="Add Comment">
+      <input class="comment" type="submit" value="Add Comment">
      
     </form>
     
@@ -62,7 +63,9 @@
                             <td><%= c.content %></td>
                             <td><%= c.overallRat %></td>
                             <form action="/teams/<%= c._id %>?_method=DELETE" method="POST" class="secondary-content">
-                            <td><button type="submit" class="delbutton">DELETE</button></td>
+                            <td><button class = "delete" type="submit" >DELETE</button></td>
+                            <input type="hidden"  value= <%= c._id %> />
+
                             </form>
                         </tr>
                     </form>  

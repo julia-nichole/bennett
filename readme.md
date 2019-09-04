@@ -30,8 +30,11 @@ https://fanatsy.herokuapp.com/
 
 
 
+# STRETCH GOALS
 
+* use who scored to import stats in real time and add a point system to each player selected 
 
+* be able to comepte with other players to see who has the best team 
 
 
 
