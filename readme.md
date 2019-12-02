@@ -55,4 +55,3 @@ https://fanatsy.herokuapp.com/
 
 * Heroku
 
-* Nodejs
